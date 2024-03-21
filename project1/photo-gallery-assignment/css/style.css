@@ -83,3 +83,10 @@ h1 {
 	width: 100%;
 	color: #fff;
 }
+figcaption {
+	color: #fff;
+}
+.selected {
+	border: 5px solid #fff;
+    box-sizing: border-box;
+}
