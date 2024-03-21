@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const largeImage = document.getElementById('largeImage');
 
     // permanently sets figCaption
-    const figCaption = document.getElementById('figCaption');
+    const figCaption = document.getElementById('caption');
 
     // sets selectedThumbnail to null
     let selectedThumbnail = null;
