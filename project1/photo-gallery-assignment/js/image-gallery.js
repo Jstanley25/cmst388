@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // permanently sets largeImage the img with id largImage
     const largeImage = document.getElementById('largeImage');
 
-    // permanently sets figCaption
-    const figCaption = document.getElementById('caption');
+    // permanently sets figureCaption
+    const figureCaption = document.getElementById('caption');
 
     // sets selectedThumbnail to null
     let selectedThumbnail = null;
@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // this stores the new largeImage src which is the src of the image being moused over
             const largeSrc = this.getAttribute('src');
 
-            // this stores the new figCaption text which is the alt text of the image being moused over
-            const figCaptionText = this.getAttribute('alt');
+            // this stores the new figureCaption text which is the alt text of the image being moused over
+            const figureCaptionText = this.getAttribute('alt');
 
             // Sets the new largeImage src to the src of the image we are hovering over
             largeImage.src = largeSrc;
 
-            // Sets the new figCaption text to the alt text of the image we are hovering over
-            figCaption.innerText = figCaptionText;
+            // Sets the new figureCaption text to the alt text of the image we are hovering over
+            figureCaption.innerText = figureCaptionText;
             
         });
 
