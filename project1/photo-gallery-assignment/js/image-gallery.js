@@ -19,14 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Takes all of the thumbnails as an arrary and adds an eventlistener to listen for the mouseover event
         thumbnails[i].addEventListener('mouseover', function() {
 
-            // this stores the new largeImage src which is the src of the image being moused over
-            const largeSrc = this.getAttribute('src');
-
             // this stores the new figureCaption text which is the alt text of the image being moused over
             const figureCaptionText = this.getAttribute('alt');
-
-            // Sets the new largeImage src to the src of the image we are hovering over
-            largeImage.src = largeSrc;
 
             // Sets the new figureCaption text to the alt text of the image we are hovering over
             figureCaption.innerText = figureCaptionText;
@@ -36,13 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // adds an onClick listener to each of the thumbnail images
         thumbnails[i].addEventListener('click', function() {
 
+            // this stores the new largeImage src which is the src of the image being moused over
+            const largeSrc = this.getAttribute('src');
+            // Sets the new largeImage src to the src of the image we are hovering over
+            largeImage.src = largeSrc;
+
             // Checks which image is the selectedThumbnail
             if (selectedThumbnail) {
-
                 // removes image as selected thumbnail
                 selectedThumbnail.classList.remove('selected');
             }
-
             // sets image we just clicked to selectedThumbnail
             this.classList.add('selected');
             selectedThumbnail = this;
