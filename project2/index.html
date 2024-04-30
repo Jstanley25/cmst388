@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form name="registration" action="mailto:jstanley25@student.umgc.edu" onsubmit="return validateForm()"
+            method="post">
+            <div class="form-row wrap">
+                <label for="firstName">First Name:*</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Please enter first name">
+                <div class="invalid-feedback">Please enter a valid first name.</div>
+            </div>
+            <div class="form-row">
+                <label for="lastName">Last Name:*</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Please enter last name">
+                <div class="invalid-feedback">Please enter a valid last name.</div>
+            </div>
+            <div class="form-row">
+                <label for="address">Address:*</label>
+                <input type="text" id="address" name="address" placeholder="Please enter your address">
+                <div class="invalid-feedback">Please enter a valid address.</div>
+            </div>
+            <div class="form-row">
+                <label for="city">City:*</label>
+                <input type="text" id="city" name="city" placeholder="Please enter the city you live in">
+                <div class="invalid-feedback">Please enter a valid city.</div>
+            </div>
+            <div class="form-row">
+                <label for="state">State:*</label>
+                <select name="state" id="state">
+                    <option value="" required>Select a state</option>
+                    <option value="alabama">Alabama</option>
+                    <option value="alaska">Alaska</option>
+                    <option value="arizona">Arizona</option>
+                    <option value="arkansas">Arkansas</option>
+                    <option value="california">California</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="connecticut">Connecticut</option>
+                    <option value="delaware">Delaware</option>
+                    <option value="florida">Florida</option>
+                    <option value="georgia">Georgia</option>
+                    <option value="hawaii">Hawaii</option>
+                    <option value="idaho">Idaho</option>
+                    <option value="illinois">Illinois</option>
+                    <option value="injdiana">Indiana</option>
+                    <option value="iowa">Iowa</option>
+                    <option value="kansas">Kansas</option>
+                    <option value="kentucky">Kentucky</option>
+                    <option value="louisiana">Louisiana</option>
+                    <option value="maine">Maine</option>
+                    <option value="maryland">Maryland</option>
+                    <option value="massachusetts">Massachusetts</option>
+                    <option value="michigan">Michigan</option>
+                    <option value="minnesota">Minnesota</option>
+                    <option value="mississippi">Mississippi</option>
+                    <option value="missouri">Missouri</option>
+                    <option value="montana">Montana</option>
+                    <option value="nebraska">Nebraksa</option>
+                    <option value="nevada">Nevada</option>
+                    <option value="new_hampshire">New Hampshire</option>
+                    <option value="new_jersey">New Jersey</option>
+                    <option value="new_mexico">New Mexico</option>
+                    <option value="new_york">New York</option>
+                    <option value="north_carolina">North Carolina</option>
+                    <option value="north_dakota">North Dakota</option>
+                    <option value="ohio">Ohio</option>
+                    <option value="oklahoma">Oklahoma</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="pennsylvania">Pennsylvania</option>
+                    <option value="rhode_island">Rhode Island</option>
+                    <option value="south_carolina">South Carolina</option>
+                    <option value="south_dakota">South Dakota</option>
+                    <option value="tennessee">Tennessee</option>
+                    <option value="texas">Texas</option>
+                    <option value="utah">Utah</option>
+                    <option value="vermont">Vermont</option>
+                    <option value="virginia">Virginia</option>
+                    <option value="washington">Washington</option>
+                    <option value="west_virginia">West Virginia</option>
+                    <option value="wisconson">Wisconson</option>
+                    <option value="wyoming">Wyoming</option>
+                </select>
+                <div class="invalid-feedback">Please select a state</div>
+            </div>
+            <div class="form-row">
+                <label for="zip">Zip Code:*</label>
+                <input type="text" class="numberic" name="zip" id="zip" placeholder="Please enter zip code">
+                <div class="invalid-feedback">Please enter zip code</div>
+            </div>
+            <div class="form-row">
+                <label for="phone">Phone:*</label>
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="555-555-5555">
+            </div>
+            <div class="form-row">
+                <label for="email">Email:*</label>
+                <input type="email" name="email" id="email" placeholder="Please enter email">
+                <div class="invalid-feedback">Please enter a valid email address</div>
+            </div>
+            <div class="form-row">
+                <label for="confirmEmail">Confirm Email:*</label>
+                <input type="confirmEmail" name="confirmEmail" id="confirmEmail" placeholder="Please enter email">
+                <div class="invalid-feedback">Email address doesn't match</div>
+            </div>
+            <fieldset class="form-row">
+                <legend class="col-form-label">Meal Preference*</legend>
+                <div id="mealpreference" class="controls">
+                    <div>
+                        <input type="radio" name="meal" id="vegan" value="vegan">
+                        <label class="form-check-label" for="vegan">Vegan</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="meal" id="vegetarian" value="vegetarian">
+                        <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="meal" id="non-vegetarian" value="non-Vegetarian">
+                        <label class="form-check-label" for="non-vegetarian">Non-Vegetarian</label>
+                        <div class="invalid-feedback">Please select a meal preference</div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-row">
+                <legend class="col-form-label">Contact Method:*</legend>
+                <div id="contactmethod" class="controls">
+                    <div class="form-row">
+                        <div class="col">
+                            <div>
+                                <input type="checkbox" name="phoneContact" id="phoneContact" value="phone">
+                                <label class="form-check-label" for="phoneContact">Phone</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="emailContact" id="emailContact" value="email">
+                                <label class="form-check-label" for="emailContact">Email</label>
+                                <div class="invalid-feedback">Please select at least two contact methods</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <input type="checkbox" name="mailContact" id="mailContact">
+                                <label class="form-check-label" for="mailContact">Mail</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="linkedInContact" id="LinkedInContact">
+                                <label class="form-check-label" for="linkedInContact">LinkedIn</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-row">
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary" name="submit" id="submitform"
+                    value="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
